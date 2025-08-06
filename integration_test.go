@@ -11,7 +11,7 @@ import (
 
 func TestTLSFingerprintCreation(t *testing.T) {
 	// 测试自定义TLS客户端创建
-	client, err := createCustomTLSClient()
+	client, err := createUTLSClient()
 	if err != nil {
 		t.Fatalf("Failed to create custom TLS client: %v", err)
 	}
@@ -138,7 +138,7 @@ func TestNetworkConnectionLogic(t *testing.T) {
 	t.Logf("Would attempt request to: %s", testURL)
 	
 	// 测试自定义TLS客户端创建
-	_, err := createCustomTLSClient()
+	_, err := createUTLSClient()
 	if err != nil {
 		t.Logf("Custom TLS client failed (expected in test): %v", err)
 		
